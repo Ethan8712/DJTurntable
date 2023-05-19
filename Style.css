@@ -93,7 +93,7 @@ header h3 {
 
 nav {
     grid-area:nav;
-    background:#729a30;
+    background:#9AC851;
     }
 
 nav li {
@@ -134,7 +134,7 @@ aside a {
 }
 
 main {
- background-color: #729a30;
+ background-color: #9AC851;
  grid-area:main;
 }
 

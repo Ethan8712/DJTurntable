@@ -1,0 +1,569 @@
+* {
+  box-sizing:border-box;
+}
+html {
+  max-width:100vw;
+}
+body {
+  font-family: Verdana;
+  background: linear-gradient(to right, #3231ab, #4562a7);
+  background-size:120%;
+  margin:0;
+  padding:0;
+  max-width:100vw;
+
+}
+
+header, nav, main, footer, aside, article{
+   border-radius:5px;
+}
+
+header {
+    grid-area:header;
+    background:#000000;
+    text-align:center;
+}
+
+header a {
+  text-decoration:none;
+}
+
+.headerpic {
+    grid-area:headerpic;
+    padding:5px;
+    height:10vmax;
+    animation: logo .5s;
+}
+
+
+.headertext {
+  grid-area:headertext;
+  text-align:center;
+}
+
+.headerwrapper {
+  display:grid;
+  justify-items:center;
+  align-items: center;
+  grid-template-columns:25% 1fr;
+  grid-template-areas: "headerpic headertext";
+}
+
+header h1 {
+    font-size:5vw;
+    color:#ffffff;
+    text-shadow: 2px 2px 5px #3217ff;
+    margin: 0;
+    animation: words 1.5s;
+}
+
+@keyframes logo {
+   0% {
+      opacity: 0;
+      transform:  translatey(-1em);
+   }
+   100% {
+      opacity: 1;
+      transform: translatey(0);
+   }
+}
+
+@keyframes words {
+   0% {
+      opacity: 0;
+      transform: translateX(1em);
+   }
+    50% {
+      opacity: .5;
+      transform: translateY(.1em);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }}
+     
+
+header h3 {
+    font-size:3vw;
+    color:#ffffff;
+    margin:0;
+    animation: words 2s;
+}
+
+
+nav {
+    grid-area:nav;
+    background:#729a30;
+    }
+
+nav li {
+    padding:10px 10px;
+    list-style-type:none;
+    font-size:1.5em;
+    font-weight:bold;
+}
+
+nav a {
+    text-decoration:none;
+    color:#000000;
+}
+nav a:hover {
+    text-shadow: 2px 2px 5px #3217ff;
+}
+
+aside {
+    grid-area:aside;
+    background:#729a30;
+    color:#000000;
+    padding:5px;
+    }
+
+aside h2 {
+    text-align:center;
+    margin:1%;
+}
+
+aside p {
+    color:#000000;
+    padding:1% 2%;
+    font-size:1em;
+}
+
+aside a {
+ color:navy;
+}
+
+main {
+ background-color: #729a30;
+ grid-area:main;
+}
+
+main h1 {
+ text-align: center;
+}
+
+main h2 {
+ color:#000000;
+ text-align: center;
+}
+
+main p {
+  color:#000000;
+    padding:1% 2%;
+    font-size:1em;
+}
+
+.video1 {
+  grid-area:video1;
+}
+.video2{
+  grid-area:video2;
+}
+.audio1 {
+  grid-area:audio1;
+}
+.audio2 {
+  grid-area:audio2;
+}
+.pic1 {
+  grid-area:pic1;
+  max-width: 350px;
+}
+.pic2 {
+  grid-area:pic2;
+  max-width: 350px;
+}
+.pic3 {
+  grid-area:pic3;
+  max-width: 350px;
+}
+
+.video1, .video2, .audio1, .audio2{
+    margin:3px;
+    display: grid;
+    justify-content:space-around;
+}
+
+video{
+    max-width: calc(75vh * 1.5);
+    max-height: 75vh;
+  
+}
+audio {
+  max-width:90%;
+}
+
+ video[poster]{
+object-fit:cover;
+}
+
+form{
+ background-color:#729a30;
+ width:90%;
+ margin:auto;
+ color: black;
+ padding:10px;
+ }
+
+.fig1 {
+  color:#0000b0;
+ text-align: center;
+  Background-color:white;
+}
+
+figcaption {
+  padding:5px;
+  color:black;
+  font-weight:bold;
+}
+figure {
+  text-align:center;
+  
+}
+figure img {
+  padding:5% 2.5%;
+  max-width:20em;
+}
+
+.gold {
+  grid-area:gold;
+  background-color:black;
+  color:white;
+}
+.silver {
+  grid-area:silver;
+  background-color:black;
+  color:white;
+}
+.platinum {
+  grid-area:platinum;
+  background-color:black;
+  color:white;
+}
+
+.weddings2 {
+  grid-area:weddings2;
+  padding:5px;
+}
+
+.school2 {
+  grid-area:school2;
+  padding:5px;
+}
+
+.corporate2 {
+  grid-area:corporate2;
+  padding:5px;
+}
+
+.special2 {
+  grid-area:special2;
+  padding:5px;
+}
+
+.about {
+  grid-area:about;
+}
+footer {
+    grid-area:footer;
+    background:#000000;
+    text-align:center;
+    padding: 5px;
+    }
+
+footer p {
+     font-size:1em;
+     color:#ffffff;
+     margin:0;
+}
+
+/*---------------------------Mobile Layout----------------------------*/
+.container1 { /*for index.html*/
+  display: grid;
+  grid-template-columns:1fr;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+    }
+  
+.weddingsgrid{
+   justify-items:center;
+   display:grid;
+   grid-template-columns:1fr;
+   grid-template-areas:
+   "weddings2";
+   }
+    
+.schoolgrid{
+   justify-items:center;
+   display:grid;
+   grid-template-columns:1fr;
+   grid-template-areas:
+   "school2";
+   }
+   
+   .corporategrid{
+   justify-items:center;
+   display:grid;
+   grid-template-columns:1fr;
+   grid-template-areas:
+   "corporate2";
+   }
+
+.weddings2 {
+  max-width: 200px;
+}
+
+.school2 {
+  max-width: 200px;
+}
+
+.corporate2 {
+  max-width: 200px;
+}
+
+/*This stuff is for the hamburger menu*/
+.toggleNav {
+    display:grid; /*This is what allows the hamburger icon and "Menu" to display*/
+    text-align:center;
+    font-size:1.5em;
+    font-weight:bold;
+    padding:10px;
+    }
+
+#flex-nav ul {
+    display: none; /*jQuery toggles the nav from to this class to the .open when clicked*/
+    text-align:center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+ 
+#flex-nav ul.open { /*.open is the class that gets toggled when clicked (with help from the jQuery code)*/
+    display:grid;
+    }
+    
+#flex-nav li {
+    padding-left:10px;
+    padding-top:10px;
+    }
+/*-----------------------Tablet Media Query------------------------*/
+@media only screen and (min-width: 480px)  {
+
+.container1 { /*for index.html*/
+  display: grid;
+  grid-template-columns:auto 1fr;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "aside aside"
+    "footer footer";
+}
+
+.homegrid {
+  justify-items:center;
+  display:grid;
+  margin:1%;
+  align-items:center;
+  grid-template-columns:1fr;
+  grid-template-areas:
+  "video1"
+  "audio1"
+  "video2"
+  "audio2";
+}
+
+.nestedgrid3{
+display:grid;
+grid-template-columns:100%;
+grid-template-areas:
+"div1"
+"div2";
+}
+
+.nestedgrid4{
+display:grid;
+grid-template-areas:
+"contactus"
+"contactform";
+}
+
+.weddingsgrid{
+justify-items:center;
+display:grid;
+grid-template-columns:1fr;
+grid-template-areas:
+"weddings2";
+}
+
+.schoolgrid{
+justify-items:center;
+display:grid;
+grid-template-columns:1fr;
+grid-template-areas:
+"school2";
+}
+
+.corporategrid{
+justify-items:center;
+display:grid;
+grid-template-columns:1fr;
+grid-template-areas:
+"corporate2";
+}
+
+.specialgrid{
+justify-items:center;
+display:grid;
+grid-template-columns:1fr;
+grid-template-areas:
+"special2";
+}
+
+
+.weddings2 {
+  max-width: 300px;
+}
+
+.school2 {
+  max-width: 300px;
+}
+
+.corporate2 {
+  max-width: 300px;
+}
+
+.special2 {
+  max-width: 300px;
+}
+
+.toggleNav {
+    display: none; /*Makes the hamburger icon with the word "Menu" to disappear at this screen size*/
+  }
+  
+#flex-nav ul {
+    display:grid;
+    text-align:left;
+  }
+
+#flex-nav li {
+    padding-left:10px;
+    padding-top:10px;
+  }
+
+}
+
+/*-----------------------Desktop Media Query------------------------*/
+@media only screen and (min-width: 960px)  {
+
+.container1 { /*for index.html*/
+  display: grid;
+  grid-template-columns:auto 1fr;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "aside aside"
+    "footer footer";
+    }
+    
+.homegrid {
+  justify-items:center;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-areas:
+  "video1 video2"
+  "audio1 audio2";
+}
+
+.nestedgrid3{
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-template-areas:
+"div1 div2";
+}
+
+.nestedgrid4{
+display:grid;
+grid-template-columns:2fr 1fr;
+grid-template-areas:
+"contactus contactform";
+}
+
+.nestedgrid5{
+justify-items:center;
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+grid-template-areas:
+"silver gold platinum";
+}
+
+.eventsgrid{
+justify-items:center;
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-template-areas:
+"weddings school"
+"corporate special";
+}
+
+.weddingsgrid{
+justify-items:center;
+display:grid;
+grid-template-columns:1fr;
+grid-template-areas:
+"weddings2";
+}
+
+.schoolgrid{
+justify-items:center;
+display:grid;
+grid-template-columns:1fr;
+grid-template-areas:
+"school2";
+}
+
+.specialgrid{
+justify-items:center;
+display:grid;
+grid-template-columns:1fr;
+grid-template-areas:
+"special2";
+}
+
+.corporategrid{
+justify-items:center;
+display:grid;
+grid-template-columns:1fr;
+grid-template-areas:
+"corporate2";
+}
+
+img {
+  max-width:90vw;
+}
+
+.weddings2 {
+  max-width: 500px;
+}
+  
+.school2 {
+  max-width: 500px;
+}
+
+.corporate2 {
+  max-width: 500px;
+}
+
+.special2 {
+  max-width: 500px;
+}
+}
